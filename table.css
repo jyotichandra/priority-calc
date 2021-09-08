@@ -1,4 +1,5 @@
- h2{
+
+h2{
     text-align: center;
     background-color: blue;
     color: white;
@@ -49,23 +50,19 @@ td{
       text-align: center;
       
 }
-#main{
+#main,#main2,#main3,#data,#data2,#data3{
     background-color:rgb(43, 226, 180);;
 }
-#hide
-{
-    border: none;
-    background-color:rgb(43, 226, 180);;
-    width:100%;
-    
-}
-#hidden
-{
+
+#a,#b,#c,#d,#e,#f,#g,#h,#i,#j,#k,#l,
+#m,#n,#o,#p,#q,#r
+{   
     border: none;
     width: 100%;
 }
-#task
+#task,#task2,#task3
 {
      border: none;
      width: 99%;
 }
+
