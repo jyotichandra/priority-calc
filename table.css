@@ -66,3 +66,14 @@ td{
      width: 99%;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    #CalcScore{
+    margin-top: 65flex;
+    font-size: medium;
+    font-weight: 700;
+    }
+
+  }
