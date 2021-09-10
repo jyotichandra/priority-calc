@@ -1,22 +1,23 @@
-
-h2{
-    text-align: center;
-    background-color: blue;
-    color: white;
+h2 {
+  text-align: center;
+  background-color: blue;
+  color: white;
 }
-.container{ 
-margin: 0;
+
+.container {
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  
 }
-#Submit{
-    background-color:rgb(43, 226, 180);;
+
+#Submit {
+  background-color: rgb(43, 226, 180);
+  ;
   border: 1px solid black;
-  color:black;
+  color: black;
   padding: 10px 40px;
   text-align: center;
   text-decoration: none;
@@ -25,55 +26,75 @@ margin: 0;
   margin: 4px 2px;
   border-radius: 10px;
 }
+
 #Submit:hover {
-    background-color: #04AA6D;
-    color: white;}
-table{
-    width: 100%;
-    height: 200px;
-    margin:0;
-     border: 1px solid black;
-     border-collapse: collapse;
-} 
-
-th{
-    background-color:rgb(43, 226, 180);
-     border: 1px solid black;
-     border-collapse: collapse;
-
-}
-td{
-    
-    border: 1px solid black;
-    
-     border-collapse: collapse;;
-      text-align: center;
-      
-}
-#main,#main2,#main3,#data,#data2,#data3{
-    background-color:rgb(43, 226, 180);;
+  background-color: #04AA6D;
+  color: white;
 }
 
-#a,#b,#c,#d,#e,#f,#g,#h,#i,#j,#k,#l,
-#m,#n,#o,#p,#q,#r
-{   
-    border: none;
-    width: 100%;
+table {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
-#task,#task2,#task3
-{
-     border: none;
-     width: 99%;
+
+th {
+  background-color: rgb(43, 226, 180);
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  ;
+  text-align: center;
+}
+
+#main, #main2, #main3, #data, #data2, #data3 {
+  background-color: rgb(43, 226, 180);
+  ;
+}
+
+#a, #b, #c, #d, #e, #f, #g, #h, #i, #j, #k, #l, #m, #n, #o, #p, #q, #r {
+  border: none;
+  width: 100%;
+}
+
+#task, #task2, #task3 {
+  border: none;
+  width: 99%;
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-    #Submit{
-    margin-top: 65flex;
+  body {
+    background-color: lightblue;
+  }
+  #Submit {
+    position: absolute;
+    bottom: -280px;
     font-size: medium;
     font-weight: 700;
-    }
-
   }
+}
+
+@media only screen and (max-width: 600px) {
+  tr {
+    display: block;
+    float: left;
+    width: 20%;
+  }
+  th, td {
+    display: block;
+    min-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  th, td {
+    display: block;
+    min-height: 50px;
+  }
+}
