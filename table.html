@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expected Value Calculator</title>
+    <link rel="stylesheet" href="table.css">
+
+ </head>
+
+<body class="phone">
+    <h1>Expected Value Calculator
+    </h1> 
+    <table>
+        <tr class="parameter">
+            <td></td>
+            <td>(DO THIS FIRST)</td>
+            <td>(1 most,5 <br> least)</td>
+            <td>(1 most,5 <br> least)</td>
+            <td>(1 most,5 <br> least)</td>
+            <td>(1 least,5 <br> most)</td>
+            <td>(1 least,5 <br> most)</td>
+            <td>(1 least,5 <br> most)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Potential Priorities</th>
+            <th>Predicted Ranking</th>
+            <th>Time (Upfront)</th>
+            <th>Time (Ongoing)</th>
+            <th>Difficult</th>
+            <th>Enjoyment</th>
+            <th>Impact (90 day)</th>
+            <th>Impact (25yr)</th>
+            <th>Total Score*</th>
+        </tr>
+        <tr>
+            <td>
+              <input type="text" id="task" name="task">
+
+            </td>  
+              
+            <td id="main"></td>
+              <td><select id="a">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+              </select></td>
+              <td><select id="b"> 
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="c">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="d">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="e">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="f">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td id="data">0</td>
+        </tr>
+        <tr>
+            <td>
+              <input type="text" id="task2" name="task2">
+
+            </td>
+              <td id="main2"></td>
+              <td><select id="g">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="h">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="i">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="j">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="k">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td><select id="l">
+                <option hidden selected></option>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select></td>
+              <td id="data2">0</td>
+        </tr>
+        
+       <tr>
+    <td> 
+      <input type="text" id="task3" name="task3">
+
+    </td>
+      
+    <td id="main3"></td>
+      <td><select id="m">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td><select id="n">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td><select id="o">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td><select id="p">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td><select id="q">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td><select id="r">
+        <option hidden selected></option>
+
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select></td>
+      <td id="data3">0</td>
+</tr>
+
+</table>
+<div class="container">
+<button id="Submit" onclick="Submit()">Submit</button>
+</div>
+<script src="function.js"></script>
+</body>
+</html>
