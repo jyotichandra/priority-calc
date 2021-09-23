@@ -1,3 +1,12 @@
+function Next() {
+    var x = document.getElementById("value1").value;
+    var y = document.getElementById("value2").value;
+    var z = document.getElementById("value3").value;
+    if (x == "" || x == null||y== "" || y== null||z == "" || z == null) {
+      alert("Please fill the empty priority");
+      return false;
+    }
+  }
 function Submit() {
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
