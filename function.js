@@ -4,9 +4,18 @@ function Next() {
     var z = document.getElementById("value3").value;
     if (x == "" || x == null||y== "" || y== null||z == "" || z == null) {
       alert("Please fill the empty priority");
-      return false;
+     return false;
     }
-  }
+    // var dis = document.getElementById("disapper");
+    // if(dis.style.display==='none')
+    // dis.style.display="block";
+    document.getElementById("disapper").style.display ="block";
+    // document.getElementById("content").style.display ="none";
+
+
+}
+
+
 function Submit() {
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
