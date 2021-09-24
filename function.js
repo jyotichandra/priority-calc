@@ -6,12 +6,8 @@ function Next() {
       alert("Please fill the empty priority");
      return false;
     }
-    // var dis = document.getElementById("disapper");
-    // if(dis.style.display==='none')
-    // dis.style.display="block";
+   
     document.getElementById("disapper").style.display ="block";
-    // document.getElementById("content").style.display ="none";
-
 
 }
 
@@ -39,74 +35,74 @@ function Submit() {
     if (a == "" || b == "" || c == "" || d == "" || e == "" || f == "" || g == "" || h == "" || i == "" || j == "" || k == "" || l == "" || m == "" || n == "" || o == "" || p == "" || q == "" || r == "")
         alert("Some field is left empty");
     else {
-        var task_Score = 0;
-        task_Score = task_Score + a * a;
-        task_Score = task_Score + b * b;
-        task_Score = task_Score + c * c;
-        task_Score = task_Score + d * d;
-        task_Score = task_Score + e * e;
-        task_Score = task_Score + f * f;
+        var task1score = 0;
+        task1score = task1score + a * a;
+        task1score = task1score + b * b;
+        task1score = task1score + c * c;
+        task1score = task1score + d * d;
+        task1score = task1score + e * e;
+        task1score = task1score + f * f;
 
 
-        var task1Score = 0;
-        task1Score = task1Score + g * g;
-        task1Score = task1Score + h * h;
-        task1Score = task1Score + i * i;
-        task1Score = task1Score + j * j;
-        task1Score = task1Score + k * k;
-        task1Score = task1Score + l * l;
+        var task2score = 0;
+        task2score = task2score + g * g;
+        task2score = task2score + h * h;
+        task2score = task2score + i * i;
+        task2score = task2score + j * j;
+        task2score = task2score + k * k;
+        task2score = task2score + l * l;
 
 
-        var task2Score = 0;
-        task2Score = task2Score + m * m;
-        task2Score = task2Score + n * n;
-        task2Score = task2Score + o * o;
-        task2Score = task2Score + p * p;
-        task2Score = task2Score + q * q;
-        task2Score = task2Score + r * r;
+        var task3score = 0;
+        task3score = task3score + m * m;
+        task3score = task3score + n * n;
+        task3score = task3score + o * o;
+        task3score = task3score + p * p;
+        task3score = task3score + q * q;
+        task3score = task3score + r * r;
 
-        document.getElementById("data").innerHTML = task_Score;
-        document.getElementById("data2").innerHTML = task1Score;
-        document.getElementById("data3").innerHTML = task2Score;
+        document.getElementById("data1").innerHTML = task1score;
+        document.getElementById("data2").innerHTML = task2score;
+        document.getElementById("data3").innerHTML = task3score;
     }
 
-    if ((task_Score >= task1Score) && (task_Score >= task2Score)) {
-        if (task1Score >= task2Score) {
+    if ((task1score >= task2score) && (task1score >= task3score)) {
+        if (task2score >= task3score) {
             document.getElementById("main3").innerHTML = 3;
             document.getElementById("main2").innerHTML = 2;
-            document.getElementById("main").innerHTML = 1;
+            document.getElementById("main1").innerHTML = 1;
 
         }
         else {
             document.getElementById("main2").innerHTML = 3;
             document.getElementById("main3").innerHTML = 2;
-            document.getElementById("main").innerHTML = 1;
+            document.getElementById("main1").innerHTML = 1;
 
         }
     }
-    else if ((task1Score >= task_Score) && (task1Score >= task2Score)) {
-        if (task_Score >= task2Score) {
+    else if ((task2score >= task1score) && (task2score >= task3score)) {
+        if (task1score >= task3score) {
             document.getElementById("main3").innerHTML = 3;
-            document.getElementById("main").innerHTML = 2;
+            document.getElementById("main1").innerHTML = 2;
             document.getElementById("main2").innerHTML = 1;
 
         }
         else {
-            document.getElementById("main").innerHTML = 3;
+            document.getElementById("main1").innerHTML = 3;
             document.getElementById("main3").innerHTML = 2;
             document.getElementById("main2").innerHTML = 1;
 
         }
     }
-    else if ((task2Score >= task_Score) && (task2Score >= task1Score)) {
-        if (task_Score >= task1Score) {
+    else if ((task3score >= task1score) && (task3score >= task2score)) {
+        if (task1score >= task2score) {
             document.getElementById("main2").innerHTML = 3;
-            document.getElementById("main").innerHTML = 2;
+            document.getElementById("main1").innerHTML = 2;
             document.getElementById("main3").innerHTML = 1;
 
         }
         else {
-            document.getElementById("main").innerHTML = 3;
+            document.getElementById("main1").innerHTML = 3;
             document.getElementById("main2").innerHTML = 2;
             document.getElementById("main3").innerHTML = 1;
         }
