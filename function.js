@@ -40,6 +40,7 @@ function teststage2(){
      document.getElementById("priority3factor6").value=1;
 }
 
+
 function Submit() {
    
     
@@ -67,6 +68,8 @@ function Submit() {
         console.log(Scores);
     }
 }
+
+
 
 
 
