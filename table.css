@@ -1,6 +1,6 @@
 *{
   margin:0;
-  padding:3px;
+  /* padding:3px; */
   box-sizing: border-box;
 }
 h1 {
@@ -46,7 +46,7 @@ input[type=text1] {
 }
 
 
-#ranks{
+#rankcalculator{
   display: none;
 }
 
@@ -63,7 +63,7 @@ table {
 }
  #header{ background-color:blue;
   color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-collapse: collapse;
 }
 #header:hover{
@@ -87,7 +87,8 @@ td {
 } 
   #priority1, #priority2, #priority3{
     border: none;
-    text-align: center;
+    text-align: center; 
+    width: 100%;
   }
 #priority1factor1, #priority1factor2, #priority1factor3,#priority1factor4,#priority1factor5,#priority1factor6{
   background-color: white; 
