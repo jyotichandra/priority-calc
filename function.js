@@ -6,13 +6,40 @@ function Next() {
       alert("Please fill the empty priority");
      return false;
     }
+    document.getElementById("priority1").value= document.getElementById("value1").value;
+    document.getElementById("priority2").value= document.getElementById("value2").value;
+    document.getElementById("priority3").value= document.getElementById("value3").value;
    
-    document.getElementById("disapper").style.display ="block";
+    document.getElementById("ranks").style.display ="block";
+    document.getElementById("priorities").style.display ="none";
 
 }
-
+function teststage1(){
+    document.getElementById("value1").value="priority1";
+    document.getElementById("value2").value="priority2";
+    document.getElementById("value3").value="priority3";
+}
 
 function Submit() {
+
+    let PriorityCount = 3;
+    let FactorCount = 6;
+    for( var priority = 1; priority <= PriorityCount ; priority++)
+    {
+        var currentPriorityScore = 0;
+        for(facor = 1; factor <= FactorCount; factor++ )
+        {
+            var optionId = "Priority" + priority + "Factor"  + factor;
+            var factorValue = document.getElementById("optionId").value;
+            currentPriorityScore =  currentPriorityScore + factorValue * factorValue;
+
+        }
+        Scores.push(currentPriorityScore);
+    }
+
+
+
+
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
     var c = document.getElementById("c").value;

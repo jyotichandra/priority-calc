@@ -12,7 +12,7 @@
 
 <body>
     <h1>Priority Calculator</h1>
-    <div id="content">
+    <div id="priorities">
 
         <div class="input1">
             <input type="text1" id="value1" placeholder="Enter Potential Priority...." name="" required>
@@ -28,11 +28,11 @@
 
         </div>
     </div>
-    <div id="disapper">
+    <div id="ranks">
         <table>
-            <tr class="parameter">
+            <tr class="numbase">
                 <td></td>
-                <td></td>
+                <td>(1 most,5 <br> least)</td>
                 <td>(1 most,5 <br> least)</td>
                 <td>(1 most,5 <br> least)</td>
                 <td>(1 most,5 <br> least)</td>
@@ -41,7 +41,7 @@
                 <td>(1 least,5 <br> most)</td>
                 <td></td>
             </tr>
-            <tr>
+            <tr id="header">
 
                 <th>Potential Priorities</th>
                 <th>Time (Upfront)</th>
@@ -55,12 +55,12 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="task1" name="task1">
+                    <input type="text" id="priority1" name="">
 
                 </td>
 
 
-                <td><select id="a">
+                <td><select id="priority1factor1">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -69,7 +69,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="b">
+                <td><select id="priority1factor2">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -78,7 +78,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="c">
+                <td><select id="priority1factor3">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -87,7 +87,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="d">
+                <td><select id="priority1factor4">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -96,7 +96,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="e">
+                <td><select id="priority1factor5">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -105,7 +105,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="f">
+                <td><select id="priority1factor6">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -114,16 +114,16 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td id="data1">0</td>
-                <td id="main1"></td>
+                <td id="score1">0</td>
+                <td id="rank1"></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="task2" name="task2">
+                    <input type="text" id="priority2" name="">
 
                 </td>
 
-                <td><select id="g">
+                <td><select id="priority2factor1">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -132,7 +132,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="h">
+                <td><select id="priority2factor2">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -141,7 +141,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="i">
+                <td><select id="priority2factor3">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -150,7 +150,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="j">
+                <td><select id="priority2factor4">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -159,7 +159,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="k">
+                <td><select id="priority2factor5">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -168,7 +168,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="l">
+                <td><select id="priority2factor6">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -177,18 +177,18 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td id="data2">0</td>
-                <td id="main2"></td>
+                <td id="score2">0</td>
+                <td id="rank2"></td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" id="task3" name="task3">
+                    <input type="text" id="priority3" name="">
 
                 </td>
 
 
-                <td><select id="m">
+                <td><select id="priority3factor1">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -197,7 +197,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="n">
+                <td><select id="priority3factor2">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -206,7 +206,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="o">
+                <td><select id="priority3factor3">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -215,7 +215,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="p">
+                <td><select id="priority3factor4">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -224,7 +224,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="q">
+                <td><select id="priority3factor5">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -233,7 +233,7 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td><select id="r">
+                <td><select id="priority3factor6">
                         <option hidden selected></option>
 
                         <option value="1">1</option>
@@ -242,12 +242,12 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></td>
-                <td id="data3">0</td>
-                <td id="main3"></td>
+                <td id="score3">0</td>
+                <td id="rank3"></td>
             </tr>
 
         </table>
-    <div class="container">
+    <div class="btn">
         <button id="Submit" onclick="Submit()">Submit</button>
     </div>
     </div>
