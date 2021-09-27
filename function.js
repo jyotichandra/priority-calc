@@ -10,7 +10,7 @@ function Next() {
     document.getElementById("priority2").value= document.getElementById("value2").value;
     document.getElementById("priority3").value= document.getElementById("value3").value;
    
-    document.getElementById("ranks").style.display ="block";
+    document.getElementById("rankcalculator").style.display ="block";
     document.getElementById("priorities").style.display ="none";
 
 }
@@ -19,120 +19,102 @@ function teststage1(){
     document.getElementById("value2").value="priority2";
     document.getElementById("value3").value="priority3";
 }
+function teststage2(){
+     document.getElementById("priority1factor1").value =1;
+     document.getElementById("priority1factor2").value=2;
+     document.getElementById("priority1factor3").value=3;
+     document.getElementById("priority1factor4").value=4;
+     document.getElementById("priority1factor5").value=5;
+     document.getElementById("priority1factor6").value=2;
+     document.getElementById("priority2factor1").value=3;
+     document.getElementById("priority2factor2").value=4;
+     document.getElementById("priority2factor3").value=1;
+     document.getElementById("priority2factor4").value=2;
+     document.getElementById("priority2factor5").value=3;
+     document.getElementById("priority2factor6").value=4;
+     document.getElementById("priority3factor1").value=1;
+     document.getElementById("priority3factor2").value=2;
+     document.getElementById("priority3factor3").value=3;
+     document.getElementById("priority3factor4").value=2;
+     document.getElementById("priority3factor5").value=1;
+     document.getElementById("priority3factor6").value=1;
+}
 
 function Submit() {
-
+   
+    
+    //  if (priority1factor1 == "" || priority1factor2 == "" || priority1factor3== "" || priority1factor4== "" || priority1factor5 == "" || priority1factor6 == "" || priority2factor1== "" || priority2factor2 == "" ||
+    //  priority2factor3 == "" || priority2factor4 == "" || priority2factor5== "" || priority2factor6 == "" || priority3factor1== "" || priority3factor2 == "" || priority3factor3== "" || priority3factor4== "" || priority3factor5 == "" || priority3factor6== "")
+    //   alert("Some field is left empty");
+    var Scores=[];
     let PriorityCount = 3;
     let FactorCount = 6;
-    // var arr[];
     for( var priority = 1; priority <= PriorityCount ; priority++)
     {
         var currentPriorityScore = 0;
-        for(factor = 1; factor <= FactorCount; factor++ )
+        for( var factor = 1; factor <= FactorCount; factor++ )
         {
-            var optionId = "Priority" + priority + "Factor"  + factor;
-            var factorValue = document.getElementById("optionId").value;
+            var optionId = "priority" + priority + "factor"  + factor;
+            
+            var factorValue = document.getElementById(optionId).value;
             currentPriorityScore =  currentPriorityScore + factorValue * factorValue;
-
+           
+            
         }
         Scores.push(currentPriorityScore);
+        var total = "score" + priority;
+        document.getElementById(total).innerHTML=Scores[priority-1];
+        console.log(Scores);
     }
 }
 
 
 
-//     var a = document.getElementById("a").value;
-//     var b = document.getElementById("b").value;
-//     var c = document.getElementById("c").value;
-//     var d = document.getElementById("d").value;
-//     var e = document.getElementById("e").value;
-//     var f = document.getElementById("f").value;
-//     var g = document.getElementById("g").value;
-//     var h = document.getElementById("h").value;
-//     var i = document.getElementById("i").value;
-//     var j = document.getElementById("j").value;
-//     var k = document.getElementById("k").value;
-//     var l = document.getElementById("l").value;
-//     var m = document.getElementById("m").value;
-//     var n = document.getElementById("n").value;
-//     var o = document.getElementById("o").value;
-//     var p = document.getElementById("p").value;
-//     var q = document.getElementById("q").value;
-//     var r = document.getElementById("r").value;
-
-//     if (a == "" || b == "" || c == "" || d == "" || e == "" || f == "" || g == "" || h == "" || i == "" || j == "" || k == "" || l == "" || m == "" || n == "" || o == "" || p == "" || q == "" || r == "")
-//         alert("Some field is left empty");
-//     else {
-//         var task1score = 0;
-//         task1score = task1score + a * a;
-//         task1score = task1score + b * b;
-//         task1score = task1score + c * c;
-//         task1score = task1score + d * d;
-//         task1score = task1score + e * e;
-//         task1score = task1score + f * f;
 
 
-//         var task2score = 0;
-//         task2score = task2score + g * g;
-//         task2score = task2score + h * h;
-//         task2score = task2score + i * i;
-//         task2score = task2score + j * j;
-//         task2score = task2score + k * k;
-//         task2score = task2score + l * l;
+         document.getElementById("score1").innerHTML = task1score;
+         document.getElementById("score2").innerHTML = task2score;
+         document.getElementById("score3").innerHTML = task3score;
+   
 
+     if ((task1score >= task2score) && (task1score >= task3score)) {
+        if (task2score >= task3score) {
+        document.getElementById("rank3").innerHTML = 3;
+         document.getElementById("rank2").innerHTML = 2;
+         document.getElementById("rank1").innerHTML = 1;
 
-//         var task3score = 0;
-//         task3score = task3score + m * m;
-//         task3score = task3score + n * n;
-//         task3score = task3score + o * o;
-//         task3score = task3score + p * p;
-//         task3score = task3score + q * q;
-//         task3score = task3score + r * r;
+    }
+   else {
+         document.getElementById("rank2").innerHTML = 3;
+         document.getElementById("rank3").innerHTML = 2;
+         document.getElementById("rank1").innerHTML = 1;
 
-//         document.getElementById("data1").innerHTML = task1score;
-//         document.getElementById("data2").innerHTML = task2score;
-//         document.getElementById("data3").innerHTML = task3score;
-//     }
+      }
+  }
+     else if ((task2score >= task1score) && (task2score >= task3score)) {
+     if (task1score >= task3score) {
+          document.getElementById("rank3").innerHTML = 3;
+          document.getElementById("rank1").innerHTML = 2;
+          document.getElementById("rank2").innerHTML = 1;
 
-//     if ((task1score >= task2score) && (task1score >= task3score)) {
-//         if (task2score >= task3score) {
-//             document.getElementById("main3").innerHTML = 3;
-//             document.getElementById("main2").innerHTML = 2;
-//             document.getElementById("main1").innerHTML = 1;
+      }
+     else {
+          document.getElementById("rank1").innerHTML = 3;
+          document.getElementById("rank3").innerHTML = 2;
+          document.getElementById("rank2").innerHTML = 1;
 
-//         }
-//         else {
-//             document.getElementById("main2").innerHTML = 3;
-//             document.getElementById("main3").innerHTML = 2;
-//             document.getElementById("main1").innerHTML = 1;
+     }
+   }
+   else if ((task3score >= task1score) && (task3score >= task2score)) {
+    if (task1score >= task2score) {
+          document.getElementById("rank2").innerHTML = 3;
+          document.getElementById("rank1").innerHTML = 2;
+          document.getElementById("rank3").innerHTML = 1;
 
-//         }
-//     }
-//     else if ((task2score >= task1score) && (task2score >= task3score)) {
-//         if (task1score >= task3score) {
-//             document.getElementById("main3").innerHTML = 3;
-//             document.getElementById("main1").innerHTML = 2;
-//             document.getElementById("main2").innerHTML = 1;
-
-//         }
-//         else {
-//             document.getElementById("main1").innerHTML = 3;
-//             document.getElementById("main3").innerHTML = 2;
-//             document.getElementById("main2").innerHTML = 1;
-
-//         }
-//     }
-//     else if ((task3score >= task1score) && (task3score >= task2score)) {
-//         if (task1score >= task2score) {
-//             document.getElementById("main2").innerHTML = 3;
-//             document.getElementById("main1").innerHTML = 2;
-//             document.getElementById("main3").innerHTML = 1;
-
-//         }
-//         else {
-//             document.getElementById("main1").innerHTML = 3;
-//             document.getElementById("main2").innerHTML = 2;
-//             document.getElementById("main3").innerHTML = 1;
-//         }
-//     }
-// }
+     }
+    else {
+         document.getElementById("rank1").innerHTML = 3;
+         document.getElementById("rank2").innerHTML = 2;
+         document.getElementById("rank3").innerHTML = 1;
+      }
+ }
