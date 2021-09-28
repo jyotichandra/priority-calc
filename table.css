@@ -1,6 +1,5 @@
 *{
   margin:0;
-  /* padding:3px; */
   box-sizing: border-box;
 }
 h1 {
@@ -80,7 +79,7 @@ td {
   text-align: center;
 }
 
-#rank1, #rank2, #rank3{
+#rankscore1, #rankscore2, #rankscore3{
   background-color: blue;
   color: white;
 
