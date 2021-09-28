@@ -45,12 +45,7 @@ function teststage2(){
 
 
 function Submit() {
-   
-    
-    //  if (priority1factor1 == "" || priority1factor2 == "" || priority1factor3== "" || priority1factor4== "" || priority1factor5 == "" || priority1factor6 == "" || priority2factor1== "" || priority2factor2 == "" ||
-    //  priority2factor3 == "" || priority2factor4 == "" || priority2factor5== "" || priority2factor6 == "" || priority3factor1== "" || priority3factor2 == "" || priority3factor3== "" || priority3factor4== "" || priority3factor5 == "" || priority3factor6== "")
-    //   alert("Some field is left empty");
-    var Scores=[];
+    var Scores={};
     let PriorityCount = 3;
     let FactorCount = 6;
     for( var priority = 1; priority <= PriorityCount ; priority++)
@@ -65,56 +60,32 @@ function Submit() {
            
             
         }
-        Scores.push(currentPriorityScore);
+        Scores[priority] = currentPriorityScore;
         var total = "score" + priority;
-        document.getElementById(total).innerHTML=Scores[priority-1];
+        document.getElementById(total).innerHTML=currentPriorityScore;
         console.log(Scores);
     }
 
-         document.getElementById("score1").innerHTML = priority1score1;
-         document.getElementById("score2").innerHTML = priority2score2;
-         document.getElementById("score3").innerHTML = priority3score3;
-   
-
-     if ((priority1score1 >= priority2score2) && (priority1score1 >= priority3score3)) {
-        if (priority2score2 >= priority3score3) {
-        document.getElementById("rankscore3").innerHTML = 3;
-         document.getElementById("rankscore2").innerHTML = 2;
-         document.getElementById("rankscore1").innerHTML = 1;
-
+    var sortable = [];
+    for (var priority in Scores) {
+        sortable.push([priority, Scores[priority]]);
     }
-   else {
-         document.getElementById("rankscore2").innerHTML = 3;
-         document.getElementById("rankscore3").innerHTML = 2;
-         document.getElementById("rankscore1").innerHTML = 1;
 
-      }
-  }
-     else if ((priority2score2 >= priority1score1) && (priority2score2 >= priority3score3)) {
-     if (priority1score1 >= priority3score3) {
-          document.getElementById("rankscore3").innerHTML = 3;
-          document.getElementById("rankscore1").innerHTML = 2;
-          document.getElementById("rankscore2").innerHTML = 1;
+    sortable.sort(function(a, b) {
+        return a[1] - b[1];
+    });
 
-      }
-     else {
-          document.getElementById("rankscore1").innerHTML = 3;
-          document.getElementById("rankscore3").innerHTML = 2;
-          document.getElementById("rankscore2").innerHTML = 1;
+    // lowest key
+    var key = "rankscore" + sortable[0][0];
+    document.getElementById(key).innerHTML = 3;
 
-     }
-   }
-   else if ((priority3score3 >= priority1score1) && (priority3score3 >= priority2score2)) {
-    if (priority1score1 >= priority2score2) {
-          document.getElementById("rankscore2").innerHTML = 3;
-          document.getElementById("rankscore1").innerHTML = 2;
-          document.getElementById("rankscore3").innerHTML = 1;
+    // middle key
+    var key = "rankscore" + sortable[1][0];
+    document.getElementById(key).innerHTML = 2;
 
-     }
-    else {
-         document.getElementById("rankscore1").innerHTML = 3;
-         document.getElementById("rankscore2").innerHTML = 2;
-         document.getElementById("rankscore3").innerHTML = 1;
-      }
- }
+    // top key
+    var key = "rankscore" + sortable[2][0];
+    document.getElementById(key).innerHTML = 1;
+
+
 }
